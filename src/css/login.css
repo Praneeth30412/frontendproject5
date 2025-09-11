@@ -1,0 +1,77 @@
+/* Main login container */
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Left panel */
+.login .leftPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  width: 400px;
+}
+
+/* Right panel */
+.login .rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .rightPanel .card {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.login .rightPanel .card input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;   /* fixed */
+  border-radius: 3px;
+}
+
+.login .rightPanel .card input:focus {
+  border: 1px solid #667eea;
+  outline: none; /* good for accessibility */
+}
+
+.login .rightPanel .card button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+
+}
+
+.login .rightPanel .card button:hover {
+  background: #3557ef;
+}
+.login .leftPanel h1{
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.login .leftPanel p{
+    font-size: 24px;
+}
+.login .rightPanel p span{
+    color: dodgerblue;
+    cursor: pointer;
+}
