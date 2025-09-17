@@ -7,7 +7,7 @@
 }
 
 /* Left panel */
-.login .leftPanel {
+.login .leftpanel {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -19,15 +19,24 @@
   width: 400px;
 }
 
+.login .leftpanel h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.login .leftpanel p {
+  font-size: 24px;
+}
+
 /* Right panel */
-.login .rightPanel {
+.login .rightpanel {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login .rightPanel .card {
+.login .rightpanel .card {
   width: 300px;
   padding: 20px;
   background: white;
@@ -36,21 +45,23 @@
   align-items: center;
   gap: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.login .rightPanel .card input {
+.login .rightpanel .card input {
   width: 100%;
   height: 30px;
-  border: 1px solid #ccc;   /* fixed */
+  border: 1px solid #ccc;
   border-radius: 3px;
+  padding: 5px;
 }
 
-.login .rightPanel .card input:focus {
+.login .rightpanel .card input:focus {
   border: 1px solid #667eea;
-  outline: none; /* good for accessibility */
+  outline: none;
 }
 
-.login .rightPanel .card button {
+.login .rightpanel .card button {
   width: 100%;
   height: 35px;
   border: none;
@@ -58,20 +69,87 @@
   background: #667eea;
   color: white;
   cursor: pointer;
-
+  transition: background 0.3s ease;
 }
 
-.login .rightPanel .card button:hover {
+.login .rightpanel .card button:hover {
   background: #3557ef;
 }
-.login .leftPanel h1{
-    font-size: 36px;
-    margin-bottom: 5px;
+
+.login .rightpanel p span {
+  color: dodgerblue;
+  cursor: pointer;
 }
-.login .leftPanel p{
-    font-size: 24px;
+
+/* Overlay for signup modal */
+.login .overlay {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgb(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.login .rightPanel p span{
-    color: dodgerblue;
-    cursor: pointer;
+
+/* Signup form modal */
+.login .overlay .signup {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: 350px;
+  height:500px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  
+}
+.login .overlay .signup label{
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.login .overlay .signup input {
+  
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+.login .overlay .signup input:focus {
+  border: 1px solid #667eea;
+  outline: none;
+}
+
+.login .overlay .signup .regButton {
+  background: #667eea;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login .overlay .signup .regButton:hover {
+  background: #3557ef;
+}
+
+/* Close button */
+.login .overlay .signup .close {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  border: none;
+  background: red;
+  color: white;
+  width: 25px; 
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
 }
